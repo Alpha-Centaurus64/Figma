@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #fff;
+    color: #171717;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 40px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.header__name {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.header__nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #171717;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: color 0.2s;
+}
+
+.header__nav a:hover {
+    color: #0077ff;
+}
+
+.header__order {
+    background: #fff;
+    border-radius: 1000px;
+    border: 1px solid #171717;
+    padding: 12px 32px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.header__order:hover {
+    background: #171717;
+    color: #fff;
+}
+
+.main-title {
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 40px 0 20px 40px;
+}
+
+.categories {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 40px 32px 40px;
+}
+
+.categories__label {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.categories__buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.category-btn {
+    padding: 12px 32px;
+    border-radius: 1000px;
+    border: 1px solid #171717;
+    background: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.category-btn.active,
+.category-btn:hover {
+    background: #171717;
+    color: #fff;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    padding: 0 40px 40px 40px;
+}
+
+.gallery-item {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-item__info {
+    padding: 16px;
+    text-align: left;
+    width: 100%;
+}
+
+.gallery-item__title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.gallery-item__desc {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.footer {
+    text-align: center;
+    padding: 24px 0;
+    background: #f9f9f9;
+    font-size: 1rem;
+    color: #171717;
+    border-top: 1px solid #eee;
+}
+
+@media (max-width: 900px) {
+    .main-title {
+        font-size: 2rem;
+        margin-left: 16px;
+    }
+
+    .categories,
+    .gallery {
+        margin-left: 16px;
+        margin-right: 16px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px;
+    }
+
+    .main-title {
+        font-size: 1.4rem;
+        margin-left: 8px;
+    }
+
+    .categories {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 0 8px 16px 8px;
+    }
+}
