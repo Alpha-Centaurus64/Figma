@@ -64,7 +64,7 @@ body {
 
 .title, .main-title {
     font-size: clamp(3rem, 8vw, 6.25rem);
-    margin: 40px 0;
+    margin: 40px -5px;
 }
 
 .categories {
