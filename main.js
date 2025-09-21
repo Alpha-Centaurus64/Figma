@@ -59,6 +59,32 @@ function renderGallery(category = "all") {
   });
 }
 
+const styles = `
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .gallery-item__info {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    transition: bottom 0.3s ease-in-out;
+  }
+
+  .gallery-item:hover .gallery-item__info {
+    bottom: 0;
+  }
+`;
+
+// Add styles to document
+const styleSheet = document.createElement("style");
+styleSheet.textContent = styles;
+document.head.appendChild(styleSheet);
+
 function setupCategoryButtons() {
   const buttons = document.querySelectorAll(".category-btn");
   buttons.forEach((btn) => {
