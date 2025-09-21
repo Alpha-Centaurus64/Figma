@@ -39,81 +39,72 @@
         </div>
       </section>
       <section class="gallery" id="works">
-        <!-- Gallery items will be rendered by JS -->
-      </section>
-
-    <div class="projects-grid" id="projectsGrid">
-      <!-- Projects will be inserted here by JavaScript -->
-    </div>
-
-    <footer class="footer">
-      <span>Sergei Chyrkov</span>
-      <span>for</span>
-      <span>Flux Academy</span>
-    </footer>
-  </div>
-
-  <script>
-    // Sample projects data
-    const projects = [
-      {
-        image: 'https://placehold.co/448x446',
-        name: 'Project Name',
-        description: 'Short description of the project',
-        category: 'abstract'
-      },
-      // Add more projects as needed
-    ];
-
-    // Generate 9 sample projects
-    for (let i = 0; i < 8; i++) {
-      projects.push({
-        image: 'https://placehold.co/448x446',
-        name: `Project ${i + 2}`,
-        description: 'Short description of the project',
-        category: ['abstract', 'nature', 'portrait'][Math.floor(Math.random() * 3)]
-      });
-    }
-
-    // Function to render projects
-    function renderProjects(category = 'all') {
-      const grid = document.getElementById('projectsGrid');
-      grid.innerHTML = '';
-
-      const filteredProjects = category === 'all' 
-        ? projects 
-        : projects.filter(p => p.category === category);
-
-      filteredProjects.forEach(project => {
-        const projectCard = `
-          <div class="project-card">
-            <img src="${project.image}" alt="${project.name}">
-            <div class="project-info">
-              <h3>${project.name}</h3>
-              <p>${project.description}</p>
-            </div>
+        <!-- Gallery items will be dynamically populated -->
+        <div class="gallery-item" data-category="abstract">
+          <img src="./Resources/Images/adbstract-01.png" alt="Abstract Art 1">
+          <div class="gallery-item__info">
+            <div class="gallery-item__title">Abstract Composition</div>
+            <div class="gallery-item__desc">A stunning display of colors and shapes</div>
           </div>
-        `;
-        grid.innerHTML += projectCard;
-      });
-    }
-
-    // Add event listeners to category buttons
-    document.querySelectorAll('.category-btn').forEach(button => {
-      button.addEventListener('click', () => {
-        // Remove active class from all buttons
-        document.querySelectorAll('.category-btn').forEach(btn => {
-          btn.classList.remove('active');
-        });
-        // Add active class to clicked button
-        button.classList.add('active');
-        // Render projects for selected category
-        renderProjects(button.dataset.category);
-      });
-    });
-
-    // Initial render
-    renderProjects();
-  </script>
+        </div>
+        <div class="gallery-item" data-category="nature">
+          <img src="./Resources/Images/nature-02.png" alt="Nature Scene 1">
+          <div class="gallery-item__info">
+            <div class="gallery-item__title">Mountain Vista</div>
+            <div class="gallery-item__desc">Majestic mountain landscape at sunset</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="portrait">
+          <img src="./Resources/Images/portraits-04.png" alt="Portrait 1">
+          <div class="gallery-item__info">
+            <div class="gallery-item__title">Urban Portrait</div>
+            <div class="gallery-item__desc">Contemporary street photography</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="abstract">
+          <img src="./Resources/Images/adbstract-02.png" alt="Abstract Art 2">
+          <div class="gallery-item__info">
+            <div class="gallery-item__title">Color Theory</div>
+            <div class="gallery-item__desc">Exploration of color relationships</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="nature">
+          <img src="./Resources/Images/nature-01.png" alt="Nature Scene 2">
+          <div class="gallery-item__info">
+            <div class="gallery-item__title">Forest Dreams</div>
+            <div class="gallery-item__desc">Mystical forest in morning mist</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="portrait">
+          <img src="./Resources/Images/portraits-01.png" alt="Portrait 2">
+          <div class="gallery-item__info">
+            <div class="gallery-item__title">The Artist</div>
+            <div class="gallery-item__desc">Environmental portrait study</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="abstract">
+          <img src="./Resources/Images/nature-03.png" alt="Abstract Art 3">
+          <div class="gallery-item__info">
+            <div class="gallery-item__title">Geometric Patterns</div>
+            <div class="gallery-item__desc">Study in form and structure</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="nature">
+          <img src="./Resources/Images/portraits-03.png" alt="Nature Scene 3">
+          <div class="gallery-item__info">
+            <div class="gallery-item__title">Ocean Waves</div>
+            <div class="gallery-item__desc">Dramatic seascape at dawn</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="portrait">
+          <img src="Resources/Images/portraits-02.png" alt="Portrait 3">
+          <div class="gallery-item__info">
+            <div class="gallery-item__title">The Musician</div>
+            <div class="gallery-item__desc">Candid performance capture</div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="Resources/js/main.js"></script></body>
 </body>
 </html>
