@@ -114,6 +114,8 @@ body {
     background: #fff;
     border-radius: 16px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    height: 446px;
+    width: 446px;
 }
 
 .project-card img, .gallery-item img {
