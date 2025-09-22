@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: whitesmoke;
 }
 
 body {
@@ -116,6 +117,8 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     height: 446px;
     width: 446px;
+    margin-left: 31rem;
+    margin-top: 8rem;
 }
 
 .project-card img, .gallery-item img {
@@ -123,6 +126,7 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
+
 }
 
 .project-info, .gallery-item__info {
@@ -130,7 +134,7 @@ body {
     bottom: 0;
     left: 0;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);
     width: 100%;
     transform: translateY(100%);
     transition: transform 0.3s ease;
